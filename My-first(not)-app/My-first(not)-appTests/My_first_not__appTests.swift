@@ -1,0 +1,34 @@
+//
+//  My_first_not__appTests.swift
+//  My-first(not)-appTests
+//
+//  Created by Michael Vanderwood on 8/4/20.
+//  Copyright © 2020 vanderwood.co. All rights reserved.
+//
+
+import XCTest
+@testable import My_first_not__app
+
+class My_first_not__appTests: XCTestCase {
+
+    override func setUpWithError() throws {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+
+    func testExample() throws {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+
+    func testPerformanceExample() throws {
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
+        }
+    }
+
+}
