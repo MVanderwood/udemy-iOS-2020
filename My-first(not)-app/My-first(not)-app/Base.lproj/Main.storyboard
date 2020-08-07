@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -29,6 +29,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QxV-JQ-3l9">
                                 <rect key="frame" x="0.0" y="453" width="414" height="409"/>
                                 <state key="normal" image="cat"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BZd-j5-Uqe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -54,11 +57,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Jdo-hg-4ZC"/>
+                                <exclude reference="sCc-AO-uAI"/>
                                 <exclude reference="FAy-bu-0oa"/>
                                 <exclude reference="eVn-80-PGp"/>
                                 <exclude reference="wD3-b0-WqL"/>
-                                <exclude reference="Jdo-hg-4ZC"/>
-                                <exclude reference="sCc-AO-uAI"/>
                                 <exclude reference="0R6-u1-rE1"/>
                                 <exclude reference="cT7-dP-Gip"/>
                                 <exclude reference="f15-kw-vqV"/>
@@ -67,39 +70,43 @@
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="sCc-AO-uAI"/>
                                 <include reference="eVn-80-PGp"/>
                                 <include reference="wD3-b0-WqL"/>
-                                <include reference="sCc-AO-uAI"/>
                                 <include reference="f15-kw-vqV"/>
                                 <include reference="mx0-Q4-qVB"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
                             <mask key="constraints">
+                                <include reference="sCc-AO-uAI"/>
                                 <include reference="eVn-80-PGp"/>
                                 <include reference="wD3-b0-WqL"/>
-                                <include reference="sCc-AO-uAI"/>
                                 <include reference="f15-kw-vqV"/>
                                 <include reference="mx0-Q4-qVB"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="FAy-bu-0oa"/>
                                 <include reference="Jdo-hg-4ZC"/>
+                                <include reference="FAy-bu-0oa"/>
                                 <include reference="0R6-u1-rE1"/>
                                 <include reference="cT7-dP-Gip"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="constraints">
-                                <include reference="FAy-bu-0oa"/>
                                 <include reference="Jdo-hg-4ZC"/>
+                                <include reference="FAy-bu-0oa"/>
                                 <include reference="0R6-u1-rE1"/>
                                 <include reference="cT7-dP-Gip"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="QxV-JQ-3l9" id="vf6-PW-1ST"/>
+                        <outlet property="label" destination="5mz-aw-cDq" id="u7U-Ic-cCg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
