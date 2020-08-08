@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Blacksword.otf">
+            <string>Blacksword</string>
+        </array>
+        <array key="LemonMilk.otf">
+            <string>LemonMilk</string>
+        </array>
+        <array key="Moon Flower.ttf">
+            <string>MoonFlower</string>
+        </array>
+        <array key="SugarstyleMillenial-Regular.ttf">
+            <string>SugarstyleMillenial-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fancy_Text_Creator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="sFm-rb-sc1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEe-mI-dkB" userLabel="Writing Label">
+                                <rect key="frame" x="0.0" y="44" width="414" height="224"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="blah" borderStyle="roundedRect" placeholder="Type Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dbi-Rv-icB" userLabel="Writing TextField">
+                                <rect key="frame" x="0.0" y="268" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="writingTextFieldDidExit:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="6hQ-Zs-fyc"/>
+                                </connections>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="krP-gi-dYY" userLabel="Font Color Stack View">
+                                <rect key="frame" x="3" y="302" width="408" height="54.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20O-k3-yUw" userLabel="Black Font Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="54.666666666666664"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Black">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="blackFontButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fRI-Oy-BNJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrc-YK-cXw" userLabel="Red Font Button">
+                                        <rect key="frame" x="104" y="0.0" width="96" height="54.666666666666664"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Red">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="redFontButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mMg-aG-gSC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnX-2b-hUu" userLabel="Blue Font Button">
+                                        <rect key="frame" x="208" y="0.0" width="96" height="54.666666666666664"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Blue">
+                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="blueFontButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="28f-Sf-tIE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPz-vK-InE" userLabel="Green Font Button">
+                                        <rect key="frame" x="312" y="0.0" width="96" height="54.666666666666664"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Green">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="greenFontButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YdT-em-UQu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K0Z-5e-oRM" userLabel="Font Stack View 1">
+                                <rect key="frame" x="3" y="364.66666666666669" width="408" height="54.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7k-Pe-HCq" userLabel="Sugar Millenial Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="54.333333333333336"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="SugarstyleMillenial-Regular" family="Sugarstyle Millenial" pointSize="30"/>
+                                        <state key="normal" title="Sugar Millenial">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sugarMillenialFontButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uOl-q1-RUx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBX-B7-9CD" userLabel="Blacksword Button">
+                                        <rect key="frame" x="208" y="0.0" width="200" height="54.333333333333336"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Blacksword" family="Blacksword" pointSize="20"/>
+                                        <state key="normal" title="Blacksword">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="blackswordFontButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Plk-HY-XFv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="I9q-Q4-hSk" userLabel="Font Stack View 2">
+                                <rect key="frame" x="3" y="424" width="408" height="54.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bd-BJ-rnY" userLabel="LemonMilk Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="54.666666666666664"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="LemonMilk" family="Lemon/Milk" pointSize="20"/>
+                                        <state key="normal" title="LemonMilk">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="lemonMilkFontButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Vi-mD-MSU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y50-M2-KcQ" userLabel="Moon Flower Button">
+                                        <rect key="frame" x="208" y="0.0" width="200" height="54.666666666666664"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="MoonFlower" family="Moon Flower" pointSize="35"/>
+                                        <state key="normal" title="Moon Flower">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="moonFlowerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ti-Ni-yiJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shadow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZ7-e5-ieO" userLabel="Shadow Label">
+                                <rect key="frame" x="3" y="546" width="411" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2wE-oF-PuM" userLabel="Shadow Color Stack View">
+                                <rect key="frame" x="3" y="572" width="408" height="54.666666666666629"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElU-QH-Bhm" userLabel="Black Font Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="54.666666666666664"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Black">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="blackFontShadowButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uLn-sA-mxm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUl-fA-Ur1" userLabel="Red Font Button">
+                                        <rect key="frame" x="104" y="0.0" width="96" height="54.666666666666664"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Red">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="redFontShadowButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kDt-Ej-cC1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaN-X3-usa" userLabel="Blue Font Button">
+                                        <rect key="frame" x="208" y="0.0" width="96" height="54.666666666666664"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Blue">
+                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="blueFontShadowButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q65-67-Omq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef9-er-sbf" userLabel="Green Font Button">
+                                        <rect key="frame" x="312" y="0.0" width="96" height="54.666666666666664"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Green">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="greenFontShadowButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4TJ-SC-Y7A"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="RxO-ps-Z05" userLabel="Shadow Direction Control Stack View">
+                                <rect key="frame" x="106.33333333333333" y="636.66666666666663" width="201.33333333333337" height="201.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="MOI-L2-gMV">
+                                        <rect key="frame" x="0.0" y="0.0" width="65.666666666666671" height="201.66666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40g-1A-URn" userLabel="Left/Up Shadow Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="65.666666666666671" height="66"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="arrow.up.left" catalog="system">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="shadowUpLeftButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a8c-Ei-chT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMe-n4-yEQ" userLabel="Left Shadow Button">
+                                                <rect key="frame" x="0.0" y="68" width="65.666666666666671" height="65.666666666666686"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="arrow.left" catalog="system"/>
+                                                <connections>
+                                                    <action selector="shadowLeftButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oPM-vK-EDB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHN-tf-cg2" userLabel="Left/Down Shadow Button">
+                                                <rect key="frame" x="0.0" y="135.66666666666674" width="65.666666666666671" height="66"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="arrow.down.left" catalog="system"/>
+                                                <connections>
+                                                    <action selector="shadowDownLeftButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aki-dK-EuK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0dU-iX-xVh">
+                                        <rect key="frame" x="67.666666666666671" y="0.0" width="66.000000000000014" height="201.66666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdn-pc-iXh" userLabel="Up Shadow Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="arrow.up" catalog="system"/>
+                                                <connections>
+                                                    <action selector="shadowUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dO1-LV-xeF"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="LkY-IV-oKW" userLabel="Shadow Weight Stack View">
+                                                <rect key="frame" x="0.0" y="68" width="66" height="65.666666666666686"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNL-tq-UKx" userLabel="Shadow Weight Increase Button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="31.666666666666668"/>
+                                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="plus" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="shadowFontWeightUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9hx-AS-EUE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrr-O0-9Eo" userLabel="Shadow Weight Decrease Button">
+                                                        <rect key="frame" x="0.0" y="33.666666666666742" width="66" height="32"/>
+                                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="minus" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="shadowFontWeightDownButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pwx-nx-Kqn"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rm-8S-Ft5" userLabel="Down Shadow Button">
+                                                <rect key="frame" x="0.0" y="135.66666666666674" width="66" height="66"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="arrow.down" catalog="system"/>
+                                                <connections>
+                                                    <action selector="shadowDownButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XyN-r3-e2N"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="V1R-At-3nk">
+                                        <rect key="frame" x="135.66666666666669" y="0.0" width="65.666666666666686" height="201.66666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwg-bu-l3Y" userLabel="Right/Up Shadow Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="65.666666666666671" height="66"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="arrow.up.right" catalog="system"/>
+                                                <connections>
+                                                    <action selector="shadowUpRightButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPd-OG-Amw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7PM-Jv-OT2" userLabel="Right Shadow Button">
+                                                <rect key="frame" x="0.0" y="68" width="65.666666666666671" height="65.666666666666686"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="arrow.right" catalog="system"/>
+                                                <connections>
+                                                    <action selector="shadowRightButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cge-Dc-OLH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNx-6g-ZaO" userLabel="Right/Down Shadow Button">
+                                                <rect key="frame" x="0.0" y="135.66666666666674" width="65.666666666666671" height="66"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="arrow.down.right" catalog="system"/>
+                                                <connections>
+                                                    <action selector="shadowDownRightButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yhq-Y1-xNk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RxO-ps-Z05" secondAttribute="height" multiplier="1:1" id="Xgx-Sm-NQx"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ucG-KT-BiR" userLabel="Font Size Stack View">
+                                <rect key="frame" x="109" y="483.66666666666669" width="196" height="54.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="QoY-r3-DXg" userLabel="Font Size Minus Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="54.666666666666664" height="54.333333333333336"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="QoY-r3-DXg" secondAttribute="height" multiplier="1:1" id="Ehz-IE-zgY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="minus" catalog="system"/>
+                                        <connections>
+                                            <action selector="fontSizeDecreaseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4gM-HP-28O"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Font Size" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69M-6s-pCF" userLabel="Font Size Label">
+                                        <rect key="frame" x="62.666666666666657" y="0.0" width="71" height="54.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="5zz-6r-syt" userLabel="Font Size Plus Button">
+                                        <rect key="frame" x="141.66666666666666" y="0.0" width="54.333333333333343" height="54.333333333333336"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5zz-6r-syt" secondAttribute="height" multiplier="1:1" id="Jdt-K4-SCh"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="plus" catalog="system"/>
+                                        <connections>
+                                            <action selector="fontSizeIncreaseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpD-59-b3h"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="krP-gi-dYY" secondAttribute="trailing" constant="3" id="1jM-vI-3pN"/>
+                            <constraint firstItem="dbi-Rv-icB" firstAttribute="top" secondItem="cEe-mI-dkB" secondAttribute="bottom" id="2R7-AQ-Tcn"/>
+                            <constraint firstAttribute="bottom" secondItem="sFm-rb-sc1" secondAttribute="bottom" id="2hl-mN-C4e"/>
+                            <constraint firstItem="ucG-KT-BiR" firstAttribute="height" secondItem="I9q-Q4-hSk" secondAttribute="height" multiplier="1:1" id="2wo-s8-oC6"/>
+                            <constraint firstItem="krP-gi-dYY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="54N-Fq-FBu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I9q-Q4-hSk" secondAttribute="trailing" constant="3" id="6iS-C6-zl7"/>
+                            <constraint firstItem="K0Z-5e-oRM" firstAttribute="top" secondItem="krP-gi-dYY" secondAttribute="bottom" constant="8" id="838-Su-aQO"/>
+                            <constraint firstItem="2wE-oF-PuM" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="1:15" id="8hE-RI-eWC"/>
+                            <constraint firstItem="RxO-ps-Z05" firstAttribute="top" secondItem="2wE-oF-PuM" secondAttribute="bottom" constant="10" id="8sQ-zy-d4l"/>
+                            <constraint firstAttribute="trailing" secondItem="sFm-rb-sc1" secondAttribute="trailing" id="9K2-Ij-9rf"/>
+                            <constraint firstItem="RxO-ps-Z05" firstAttribute="height" secondItem="cEe-mI-dkB" secondAttribute="height" multiplier="9:10" id="Ciu-st-dh4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cEe-mI-dkB" secondAttribute="trailing" id="DC2-fr-kLv"/>
+                            <constraint firstItem="I9q-Q4-hSk" firstAttribute="height" secondItem="K0Z-5e-oRM" secondAttribute="height" id="FqE-Aw-mo3"/>
+                            <constraint firstItem="ucG-KT-BiR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hyl-6L-YTs"/>
+                            <constraint firstItem="cEe-mI-dkB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MFC-jf-qDJ"/>
+                            <constraint firstItem="cEe-mI-dkB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NLd-4C-36S"/>
+                            <constraint firstItem="I9q-Q4-hSk" firstAttribute="top" secondItem="K0Z-5e-oRM" secondAttribute="bottom" constant="5" id="OU0-uL-sNY"/>
+                            <constraint firstItem="krP-gi-dYY" firstAttribute="top" secondItem="dbi-Rv-icB" secondAttribute="bottom" id="PpJ-yl-ynW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K0Z-5e-oRM" secondAttribute="trailing" constant="3" id="RDh-jQ-edS"/>
+                            <constraint firstItem="RxO-ps-Z05" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RcT-RW-g4v"/>
+                            <constraint firstItem="dbi-Rv-icB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SQn-g8-LNy"/>
+                            <constraint firstItem="I9q-Q4-hSk" firstAttribute="leading" secondItem="K0Z-5e-oRM" secondAttribute="trailing" constant="8" id="StN-rn-PVb"/>
+                            <constraint firstItem="2wE-oF-PuM" firstAttribute="top" secondItem="gZ7-e5-ieO" secondAttribute="bottom" constant="3" id="UNe-TW-FEg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dbi-Rv-icB" secondAttribute="trailing" id="Wn6-bx-iDk"/>
+                            <constraint firstItem="gZ7-e5-ieO" firstAttribute="top" secondItem="ucG-KT-BiR" secondAttribute="bottom" constant="8" id="aO4-wh-kLH"/>
+                            <constraint firstItem="cEe-mI-dkB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:4" id="c5H-Sa-27f"/>
+                            <constraint firstItem="2wE-oF-PuM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="cMY-um-yDZ"/>
+                            <constraint firstItem="K0Z-5e-oRM" firstAttribute="height" secondItem="krP-gi-dYY" secondAttribute="height" multiplier="1:1" id="co2-Ur-j6u"/>
+                            <constraint firstItem="I9q-Q4-hSk" firstAttribute="top" secondItem="krP-gi-dYY" secondAttribute="bottom" constant="8" id="dDd-jh-DIJ"/>
+                            <constraint firstItem="sFm-rb-sc1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ehO-JP-SVZ"/>
+                            <constraint firstItem="gZ7-e5-ieO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="h07-wb-90x"/>
+                            <constraint firstItem="I9q-Q4-hSk" firstAttribute="width" secondItem="K0Z-5e-oRM" secondAttribute="width" id="h7k-Iv-CRS"/>
+                            <constraint firstItem="krP-gi-dYY" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="1:15" id="hYy-Jk-2k3"/>
+                            <constraint firstItem="K0Z-5e-oRM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="pk0-nJ-sX1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2wE-oF-PuM" secondAttribute="trailing" constant="3" id="qJX-xh-nZi"/>
+                            <constraint firstItem="I9q-Q4-hSk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="roq-KF-g1o"/>
+                            <constraint firstItem="sFm-rb-sc1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vad-Nn-mjr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gZ7-e5-ieO" secondAttribute="trailing" id="voy-3D-shG"/>
+                            <constraint firstItem="ucG-KT-BiR" firstAttribute="top" secondItem="I9q-Q4-hSk" secondAttribute="bottom" constant="5" id="y2F-OY-CXp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RDh-jQ-edS"/>
+                                <exclude reference="OU0-uL-sNY"/>
+                                <exclude reference="StN-rn-PVb"/>
+                                <exclude reference="dDd-jh-DIJ"/>
+                                <exclude reference="h7k-Iv-CRS"/>
+                                <exclude reference="roq-KF-g1o"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="RDh-jQ-edS"/>
+                                <include reference="OU0-uL-sNY"/>
+                                <include reference="roq-KF-g1o"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="RDh-jQ-edS"/>
+                                <include reference="StN-rn-PVb"/>
+                                <include reference="dDd-jh-DIJ"/>
+                                <include reference="h7k-Iv-CRS"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="RDh-jQ-edS"/>
+                                <include reference="OU0-uL-sNY"/>
+                                <include reference="roq-KF-g1o"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="RDh-jQ-edS"/>
+                                <include reference="StN-rn-PVb"/>
+                                <include reference="dDd-jh-DIJ"/>
+                                <include reference="h7k-Iv-CRS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="EditingLabel" destination="cEe-mI-dkB" id="7rG-Wx-ZIM"/>
+                        <outlet property="blackFontColorButton" destination="20O-k3-yUw" id="XyF-a7-dCB"/>
+                        <outlet property="blackswordFontButton" destination="yBX-B7-9CD" id="lEk-Kn-hda"/>
+                        <outlet property="blueFontColorButton" destination="ZnX-2b-hUu" id="3CS-EN-6pR"/>
+                        <outlet property="greenFontColorButton" destination="FPz-vK-InE" id="FEc-H9-PTs"/>
+                        <outlet property="lemonMilkFontButton" destination="3Bd-BJ-rnY" id="a82-JP-SZZ"/>
+                        <outlet property="moonFlowerFontButton" destination="Y50-M2-KcQ" id="WKT-bl-Gd8"/>
+                        <outlet property="redFontColorButton" destination="qrc-YK-cXw" id="IgA-1d-yLy"/>
+                        <outlet property="sugarMillenialFontButton" destination="t7k-Pe-HCq" id="bxk-mQ-Wn8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="123.59154929577466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1920" height="1080"/>
+        <image name="arrow.down" catalog="system" width="120" height="128"/>
+        <image name="arrow.down.left" catalog="system" width="128" height="111"/>
+        <image name="arrow.down.right" catalog="system" width="128" height="111"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
+        <image name="arrow.up.left" catalog="system" width="128" height="111"/>
+        <image name="arrow.up.right" catalog="system" width="128" height="111"/>
+        <image name="minus" catalog="system" width="128" height="24"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
