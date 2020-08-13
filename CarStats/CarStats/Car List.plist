@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>Audi R8 Spyder</string>
+		<key>Image</key>
+		<string>Audi</string>
+		<key>BHP</key>
+		<integer>601</integer>
+		<key>Acceleration</key>
+		<real>3.2</real>
+		<key>Top Speed</key>
+		<integer>204</integer>
+		<key>MPG</key>
+		<integer>20</integer>
+		<key>Price</key>
+		<integer>149890</integer>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Ferrari California</string>
+		<key>Image</key>
+		<string>Ferrari</string>
+		<key>BHP</key>
+		<integer>483</integer>
+		<key>Acceleration</key>
+		<real>3.7</real>
+		<key>Top Speed</key>
+		<integer>193</integer>
+		<key>MPG</key>
+		<integer>21</integer>
+		<key>Price</key>
+		<integer>85425</integer>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Lamborghini Huracan</string>
+		<key>Image</key>
+		<string>Lambo</string>
+		<key>BHP</key>
+		<integer>571</integer>
+		<key>Acceleration</key>
+		<real>3.5</real>
+		<key>Top Speed</key>
+		<integer>199</integer>
+		<key>MPG</key>
+		<integer>23</integer>
+		<key>Price</key>
+		<integer>173065</integer>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Mercedes-Benz AMG GT</string>
+		<key>Image</key>
+		<string>Merc</string>
+		<key>BHP</key>
+		<integer>549</integer>
+		<key>Acceleration</key>
+		<real>3.6</real>
+		<key>Top Speed</key>
+		<integer>196</integer>
+		<key>MPG</key>
+		<integer>22</integer>
+		<key>Price</key>
+		<integer>141930</integer>
+	</dict>
+</array>
+</plist>

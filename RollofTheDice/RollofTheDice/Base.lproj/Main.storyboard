@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RollofTheDice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="table" translatesAutoresizingMaskIntoConstraints="NO" id="iiG-Zt-MpH" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll the Dice" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FNl-aw-Lut" userLabel="Title Label">
+                                <rect key="frame" x="20" y="43.999999999999986" width="374" height="226.66666666666663"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice1" translatesAutoresizingMaskIntoConstraints="NO" id="xUj-Q4-u48" userLabel="Dice Result Image">
+                                <rect key="frame" x="20" y="320.66666666666669" width="374" height="245.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xUj-Q4-u48" secondAttribute="height" multiplier="374:245" id="4Kr-IE-qTM"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTZ-Sv-zHc" userLabel="Roll Button">
+                                <rect key="frame" x="20" y="635.66666666666663" width="374" height="226.33333333333337"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="89"/>
+                                <state key="normal" title="Roll!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mTS-Hk-c8D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xUj-Q4-u48" secondAttribute="trailing" constant="20" id="2Lm-5h-tbl"/>
+                            <constraint firstItem="xUj-Q4-u48" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4Xu-a0-Iha"/>
+                            <constraint firstItem="iiG-Zt-MpH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="91y-JG-1n5"/>
+                            <constraint firstItem="xUj-Q4-u48" firstAttribute="top" secondItem="FNl-aw-Lut" secondAttribute="bottom" constant="50" id="CCA-nn-Kj3"/>
+                            <constraint firstItem="iiG-Zt-MpH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PiD-TH-EOz"/>
+                            <constraint firstItem="eTZ-Sv-zHc" firstAttribute="height" secondItem="FNl-aw-Lut" secondAttribute="height" id="SKq-lf-pqd"/>
+                            <constraint firstItem="FNl-aw-Lut" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="T08-MK-xwL"/>
+                            <constraint firstItem="eTZ-Sv-zHc" firstAttribute="width" secondItem="FNl-aw-Lut" secondAttribute="width" id="cKX-T0-lvP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FNl-aw-Lut" secondAttribute="trailing" constant="20" id="ebd-eW-lZE"/>
+                            <constraint firstItem="eTZ-Sv-zHc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jdH-kT-TkT"/>
+                            <constraint firstItem="eTZ-Sv-zHc" firstAttribute="top" secondItem="xUj-Q4-u48" secondAttribute="bottom" constant="70" id="m39-dx-98M"/>
+                            <constraint firstItem="FNl-aw-Lut" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="n48-Le-kce"/>
+                            <constraint firstItem="eTZ-Sv-zHc" firstAttribute="centerX" secondItem="iiG-Zt-MpH" secondAttribute="centerX" id="uIN-DO-SCL"/>
+                            <constraint firstAttribute="bottom" secondItem="iiG-Zt-MpH" secondAttribute="bottom" id="w4c-Ds-ckS"/>
+                            <constraint firstItem="iiG-Zt-MpH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yhN-7g-PfX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="diceResultImage" destination="xUj-Q4-u48" id="SQW-6Y-WYt"/>
+                        <outlet property="titleLabel" destination="FNl-aw-Lut" id="LGd-Ea-8Ey"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Dice1" width="99" height="98"/>
+        <image name="table" width="414" height="736"/>
+    </resources>
+</document>

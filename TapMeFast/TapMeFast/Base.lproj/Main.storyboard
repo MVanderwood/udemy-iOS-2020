@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PORKYS_.TTF">
+            <string>Porkys</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TapMeFast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="kpC-Ve-L6w">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Me Fast!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="0bT-o9-0WH" userLabel="Title Label">
+                                <rect key="frame" x="20" y="44" width="384" height="295"/>
+                                <fontDescription key="fontDescription" name="Porkys" family="Porky's" pointSize="75"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lE-UC-LdX">
+                                <rect key="frame" x="20" y="369" width="374" height="90"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.24926893781907489" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="76a-rx-NSQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Porkys" family="Porky's" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYF-z3-naa">
+                                <rect key="frame" x="20" y="469" width="374" height="90"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.24926893781907489" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="XYa-KE-PTk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Porkys" family="Porky's" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBl-Eh-zWN">
+                                <rect key="frame" x="20" y="567" width="374" height="295"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.24670961587735923" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Porkys" family="Porky's" pointSize="67"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Uh-KN-fbG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IBl-Eh-zWN" secondAttribute="trailing" constant="20" id="2sX-Qh-hU5"/>
+                            <constraint firstItem="IBl-Eh-zWN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3SH-ZB-6p8"/>
+                            <constraint firstItem="0lE-UC-LdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6p5-Iv-PDB"/>
+                            <constraint firstItem="0bT-o9-0WH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7Ym-i5-rwU"/>
+                            <constraint firstItem="kpC-Ve-L6w" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8WY-JR-3fB"/>
+                            <constraint firstItem="RYF-z3-naa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BGk-jn-LRT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RYF-z3-naa" secondAttribute="trailing" constant="20" id="FTI-Ev-NW6"/>
+                            <constraint firstItem="IBl-Eh-zWN" firstAttribute="top" secondItem="RYF-z3-naa" secondAttribute="bottom" constant="8" id="Ig4-cs-RDs"/>
+                            <constraint firstItem="0bT-o9-0WH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KcW-nf-gE9"/>
+                            <constraint firstItem="RYF-z3-naa" firstAttribute="top" secondItem="0lE-UC-LdX" secondAttribute="bottom" constant="10" id="Mlv-uB-DEM"/>
+                            <constraint firstItem="kpC-Ve-L6w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WiP-V8-HcA"/>
+                            <constraint firstItem="0bT-o9-0WH" firstAttribute="height" secondItem="IBl-Eh-zWN" secondAttribute="height" multiplier="1:1" id="aZT-MU-gNf"/>
+                            <constraint firstItem="kpC-Ve-L6w" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cyt-h8-mNU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0lE-UC-LdX" secondAttribute="trailing" constant="20" id="dZM-Tb-Nao"/>
+                            <constraint firstAttribute="bottom" secondItem="kpC-Ve-L6w" secondAttribute="bottom" id="gXK-eg-fNr"/>
+                            <constraint firstItem="0lE-UC-LdX" firstAttribute="top" secondItem="0bT-o9-0WH" secondAttribute="bottom" constant="30" id="kmY-pf-sKb"/>
+                            <constraint firstItem="IBl-Eh-zWN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nwK-VF-H6z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0bT-o9-0WH" secondAttribute="trailing" constant="10" id="s1A-1T-U4F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="IBl-Eh-zWN" id="fHa-eZ-lav"/>
+                        <outlet property="scoreLabel" destination="RYF-z3-naa" id="kaP-Sk-WCr"/>
+                        <outlet property="timeLabel" destination="0lE-UC-LdX" id="fMU-UH-Fit"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1920" height="1080"/>
+    </resources>
+</document>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CarStats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="hQ0-3r-mCb" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ferrari" translatesAutoresizingMaskIntoConstraints="NO" id="YNf-vw-eqR" userLabel="Car Image View">
+                                <rect key="frame" x="20" y="64" width="374" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YNf-vw-eqR" secondAttribute="height" multiplier="374:225" id="apw-n4-YRH"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cuB-n2-qcI" userLabel="Stats Stack View">
+                                <rect key="frame" x="16" y="305" width="382" height="541"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUl-4n-EeO" userLabel="Get Random Car Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="51.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="26"/>
+                                        <state key="normal" title="Get Random Car">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getRandomCarButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="upq-Iq-0AS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwe-Ea-f9M" userLabel="Car Title Label">
+                                        <rect key="frame" x="0.0" y="81.5" width="382" height="51.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNq-DZ-oX1" userLabel="Car BHP Label">
+                                        <rect key="frame" x="0.0" y="163" width="382" height="51.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dtv-gA-c1S" userLabel="Car Acceleration Label">
+                                        <rect key="frame" x="0.0" y="244.5" width="382" height="52"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pck-hy-nKV" userLabel="Car Top Speed Label">
+                                        <rect key="frame" x="0.0" y="326.5" width="382" height="51.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqQ-XR-1OF" userLabel="Car MPG Label">
+                                        <rect key="frame" x="0.0" y="408" width="382" height="51.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-7W-TGt" userLabel="Car Price Label">
+                                        <rect key="frame" x="0.0" y="489.5" width="382" height="51.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YNf-vw-eqR" secondAttribute="trailing" constant="20" id="9uK-vZ-bkI"/>
+                            <constraint firstItem="cuB-n2-qcI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="C4W-j5-kYL"/>
+                            <constraint firstItem="hQ0-3r-mCb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="C8Q-pv-uvq"/>
+                            <constraint firstAttribute="bottom" secondItem="hQ0-3r-mCb" secondAttribute="bottom" id="MQm-Vz-OKS"/>
+                            <constraint firstItem="YNf-vw-eqR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="QNB-ey-5l1"/>
+                            <constraint firstItem="hQ0-3r-mCb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cVm-so-mqz"/>
+                            <constraint firstItem="hQ0-3r-mCb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gsK-hf-NlU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cuB-n2-qcI" secondAttribute="trailing" constant="16" id="mou-V9-fWm"/>
+                            <constraint firstItem="YNf-vw-eqR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oNT-EJ-MS9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cuB-n2-qcI" secondAttribute="bottom" constant="16" id="ueh-hg-CKc"/>
+                            <constraint firstItem="cuB-n2-qcI" firstAttribute="top" secondItem="YNf-vw-eqR" secondAttribute="bottom" constant="16" id="y2J-v5-qMv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="carAccelerationLabel" destination="Dtv-gA-c1S" id="ImE-ur-LGE"/>
+                        <outlet property="carBHPLabel" destination="oNq-DZ-oX1" id="jFp-3A-Wi1"/>
+                        <outlet property="carImageView" destination="YNf-vw-eqR" id="z3v-hO-bB4"/>
+                        <outlet property="carMPGLabel" destination="oqQ-XR-1OF" id="2g0-9Q-58a"/>
+                        <outlet property="carPriceLabel" destination="uAf-7W-TGt" id="HOh-HG-4cB"/>
+                        <outlet property="carTitleLabel" destination="Bwe-Ea-f9M" id="H14-3s-OcA"/>
+                        <outlet property="carTopSpeedLabel" destination="pck-hy-nKV" id="UYa-9c-O6V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Ferrari" width="1920" height="1080"/>
+        <image name="background" width="1920" height="1080"/>
+    </resources>
+</document>
