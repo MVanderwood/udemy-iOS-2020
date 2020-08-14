@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShakeMeSilly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="sb2-kV-Bvy" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ukm-EP-xj7" userLabel="Title Label">
+                                <rect key="frame" x="20" y="44" width="374" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="9bu-nW-4bf"/>
+                                </constraints>
+                                <string key="text">Shake Me
+Silly!</string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="75"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="ofi-SH-N1e" userLabel="Time Remaining Label">
+                                <rect key="frame" x="20" y="192" width="374" height="75.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Bq8-hZ-8cY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Face1" translatesAutoresizingMaskIntoConstraints="NO" id="aDE-Kb-GNl" userLabel="Face Image View">
+                                <rect key="frame" x="25" y="275.33333333333331" width="364" height="363.99999999999994"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aDE-Kb-GNl" secondAttribute="height" multiplier="1:1" id="DCv-5f-4r5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="sje-rI-kNt" userLabel="Score Label">
+                                <rect key="frame" x="20" y="647.33333333333337" width="374" height="75.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="k9o-2R-DBa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2A-0V-xLf" userLabel="Start Game Button">
+                                <rect key="frame" x="20" y="730.66666666666663" width="374" height="116.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="HIz-WI-rlZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="49"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AoD-ku-lle"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sje-rI-kNt" firstAttribute="top" secondItem="aDE-Kb-GNl" secondAttribute="bottom" constant="8" id="7tm-hx-iQx"/>
+                            <constraint firstItem="ofi-SH-N1e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7uY-x3-WsM"/>
+                            <constraint firstItem="sb2-kV-Bvy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8CS-48-O6j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ofi-SH-N1e" secondAttribute="trailing" constant="20" id="DF4-qW-x7x"/>
+                            <constraint firstItem="L2A-0V-xLf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EW1-wz-nX5"/>
+                            <constraint firstAttribute="bottom" secondItem="sb2-kV-Bvy" secondAttribute="bottom" id="Ehl-Yu-K2P"/>
+                            <constraint firstItem="aDE-Kb-GNl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="L4e-4B-d2V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aDE-Kb-GNl" secondAttribute="trailing" constant="25" id="LTp-kz-q07"/>
+                            <constraint firstItem="L2A-0V-xLf" firstAttribute="top" secondItem="sje-rI-kNt" secondAttribute="bottom" constant="8" id="ToK-xD-WYu"/>
+                            <constraint firstItem="sb2-kV-Bvy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wgb-P0-ABJ"/>
+                            <constraint firstItem="sje-rI-kNt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZcB-KV-ykj"/>
+                            <constraint firstItem="sb2-kV-Bvy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dxR-Tt-ARL"/>
+                            <constraint firstItem="Ukm-EP-xj7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gUi-Rk-Ayt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sje-rI-kNt" secondAttribute="trailing" constant="20" id="hU4-dc-hDl"/>
+                            <constraint firstItem="Ukm-EP-xj7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hws-Zv-OfM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L2A-0V-xLf" secondAttribute="trailing" constant="20" id="kdx-kB-FLQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ukm-EP-xj7" secondAttribute="trailing" constant="20" id="nEB-Bi-j4i"/>
+                            <constraint firstItem="L2A-0V-xLf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-15" id="nWl-gg-zLT"/>
+                            <constraint firstItem="aDE-Kb-GNl" firstAttribute="top" secondItem="ofi-SH-N1e" secondAttribute="bottom" constant="8" id="oLd-Db-kIW"/>
+                            <constraint firstItem="ofi-SH-N1e" firstAttribute="top" secondItem="Ukm-EP-xj7" secondAttribute="bottom" constant="8" id="riA-le-fiz"/>
+                            <constraint firstItem="aDE-Kb-GNl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="zX9-jl-paA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="faceImageView" destination="aDE-Kb-GNl" id="mvh-2h-ZZ5"/>
+                        <outlet property="scoreLabel" destination="sje-rI-kNt" id="Htu-yG-cqr"/>
+                        <outlet property="startGameButton" destination="L2A-0V-xLf" id="Slb-iT-dNk"/>
+                        <outlet property="timeRemainingLabel" destination="ofi-SH-N1e" id="C9F-PH-NTm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1920" height="1080"/>
+        <image name="Face1" width="512" height="512"/>
+    </resources>
+</document>
